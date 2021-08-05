@@ -25,10 +25,19 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@spartacus/smartedit/assets",
+                "output": "assets/"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/spartacus/user.scss",
+              "src/styles/spartacus/storefinder.scss",
+              "src/styles/spartacus/product.scss",
+              "src/styles/spartacus/cart.scss"
             ],
             "scripts": []
           },
@@ -89,10 +98,19 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@spartacus/smartedit/assets",
+                "output": "assets/"
+              }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/spartacus/user.scss",
+              "src/styles/spartacus/storefinder.scss",
+              "src/styles/spartacus/product.scss",
+              "src/styles/spartacus/cart.scss"
             ],
             "scripts": []
           }
@@ -123,6 +141,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stor"
+    }
+  },
+  "defaultProject": "stor",
+  "cli": {
+    "analytics": false
+  }
 }
