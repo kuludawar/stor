@@ -18,12 +18,29 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
       currency: ['USD'],
       language: ['en'],
     },
-  }), provideConfig(<I18nConfig>{
+    //<I18nConfig>
+  }), provideConfig({
     i18n: {
       resources: translations,
-      chunks: translationChunksConfig,
-      fallbackLang: 'en'
-    },
+        chunks: translationChunksConfig,
+        fallbackLang: 'en'
+      },
+     // new code
+     providers: [
+      provideConfig({
+        i18n: {
+            resources: {
+                en: translations, // or YOUR_ENGLISH_TRANSLATIONS,
+                de: 'Punjabi',
+                
+            },
+            chunks: translationChunksConfig
+        }
+      })
+    ],
+     // finish codo
+
+    
   }), provideConfig(<FeaturesConfig>{
     features: {
       level: '3.4'
