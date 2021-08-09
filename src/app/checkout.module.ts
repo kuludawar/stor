@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { ConfigModule } from '@spartacus/core';
 import { CheckoutConfig } from '@spartacus/storefront';
 
@@ -13,4 +14,6 @@ import { CheckoutConfig } from '@spartacus/storefront';
     } as CheckoutConfig)
   ]
 })
-export class CheckoutConfigurationModule { }
+export class CheckoutConfigurationModule { 
+
+}
